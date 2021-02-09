@@ -1,0 +1,8 @@
+<div class="text-center mt-5 fs-3">
+    <p>Nom : <span class="text-secondary fs-4"><%=User.find_by(first_name: @name).first_name%> <%=User.find_by(first_name: @name).last_name%></span> </p> 
+    <p>Age : <span class="text-secondary fs-4"><%=User.find_by(first_name: @name).age%> ans</span></p>
+    <p>Email : <span class="text-secondary fs-4"><%=User.find_by(first_name: @name).email%></span></p>
+    <p>Ville : <span class="text-secondary fs-4"><%=User.find_by(first_name: @name).city.name%></span></p>
+    <p>Description : <span class="text-secondary fs-4">"<%=User.find_by(first_name: @name).description%>"</span></p>
+    <p><a href="/welcome" class="btn btn-outline-primary">Retour à l'accueil</a></p>
+</div>

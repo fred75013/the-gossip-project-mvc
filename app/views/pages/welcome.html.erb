@@ -1,0 +1,19 @@
+<div class='mt-3 text-center'>
+  <h1>Bienvenue <%= @first_name %> sur The Gossip Project</h1><br>
+  <p>la liste des différents gossips</p>
+</div>
+
+<div class="row m-3">
+  <% @gossip.each do |i|%>
+  <br>
+    <div class="col-sm-4 mt-3">
+      <div class="card">
+        <div class="card-body text-center mx-auto">
+          <h5 class="card-title"> Titre : <%=i.title%> </h5>
+          <p class="card-text">Créer par : <%= i.user.first_name %> </p>
+          <a href= "/gossip/<%=i.title%>/" class="btn btn-outline-primary btn-sm">Voir le gossip</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
